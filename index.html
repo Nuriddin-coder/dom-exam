@@ -1,0 +1,297 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="./css/main.css" />
+    <title>Document</title>
+  </head>
+  <body>
+    <div class="wrapper">
+      <header class="header">
+        <div class="container header__container">
+          <div class="header_for__mb">
+            <div class="header_save">
+              <div class="header_save__logo">
+                <img
+                  class="header_save__logo_img"
+                  src="./img/icons/Logo-icon.svg"
+                  alt="logo"
+                />
+                <p class="header_save__logo_text">E-Comm</p>
+              </div>
+              <div class="header_save__icons">
+                <button class="header_save__btn_first">
+                  <img
+                    class="header_save__heart"
+                    src="./img/icons/mb-heart-icon.svg"
+                    alt="icon"
+                  />
+                </button>
+                <button class="header_save__btn_second">
+                  <img
+                    class="header_save__system"
+                    src="./img/icons/bag-icon.svg"
+                    alt="icon"
+                  />
+
+                  <span class="header_mb__bag_num">0</span>
+                </button>
+                <button class="header_save__btn_second">
+                  <img
+                    class="header_save__system"
+                    src="./img/icons/mb-system-icon.svg"
+                    alt="icon"
+                  />
+                </button>
+                <button class="header_save__btn_second dark_mood_mb">
+                  <img
+                    class="header_save__system"
+                    src="./img/icons/moon.svg"
+                    alt="icon"
+                  />
+                </button>
+              </div>
+            </div>
+
+            <div class="header_input">
+              <img src="./img/icons/mb_search_icon.svg" alt="icon" />
+              <input type="text" placeholder="Search Product" />
+            </div>
+          </div>
+
+          <div class="header_for__desktop">
+            <div class="header_select">
+              <select class="header_select__items">
+                <option value="EN">EN</option>
+                <option value="UZ">UZ</option>
+              </select>
+              <select class="header_select__items">
+                <option value="USD">USD</option>
+                <option value="UZS">UZS</option>
+              </select>
+            </div>
+            <div class="header_main">
+              <button class="header_main__profile">
+                <img
+                  class="header_main__profile_img"
+                  src="./img/icons/header-profile-icon.svg"
+                  alt="icon"
+                />
+                <p class="header_main__profile_text">My profile</p>
+              </button>
+
+              <div class="header_main__bag">
+                <button class="header_main__bag_btn">
+                  <img
+                    class="header_main__bag_img"
+                    src="./img/icons/header-bag-icon.svg"
+                    alt="icon"
+                  />
+                </button>
+                <span class="header_main__bag_num">0</span>
+              </div>
+
+              <p class="header_main__items_text">Items</p>
+
+              <span class="header_main__price">
+                <p class="header_main__price_num">$0.00</p>
+                <img
+                  class="header_main__price_img"
+                  src="./img/icons/header-search-icon.svg"
+                  alt="icon"
+                />
+              </span>
+
+              <button class="dark_mood">Dark Mood</button>
+            </div>
+          </div>
+        </div>
+      </header>
+      <main class="main">
+        <section class="header_category">
+          <div class="container hr_category__container">
+            <a class="hr_category__logo" href="#">
+              <img
+                class="hr_category__logo_img"
+                src="./img/icons/Logo-icon.svg"
+                alt="icon"
+              />
+              <p class="hr_category__logo_title">E-Comm</p>
+            </a>
+
+            <div class="hr_category__main">
+              <a class="hr_category__main" href="#">HOME</a>
+              <a class="hr_category__main" href="#">BAGS</a>
+              <a class="hr_category__main" href="#">SNEAKERS</a>
+              <a class="hr_category__main" href="#">BELT</a>
+              <a class="hr_category__main" href="#">CONTACT</a>
+            </div>
+          </div>
+        </section>
+
+        <section class="hero">
+          <div class="container hero_container">
+            <a href="#" class="hero_for__mb">
+              <swiper-container
+                class="mySwiper"
+                pagination="true"
+                pagination-clickable="true"
+                space-between="0"
+                slides-per-view="1"
+              >
+                <swiper-slide class="hero__mobile">
+                  <h1 class="hero_title">Super Flash Sale 50% Off</h1>
+                  <div id="countdown" class="timer_product"></div>
+                </swiper-slide>
+                <swiper-slide class="hero__mobile_second">
+                  <h1 class="hero_title">Super Flash Sale 30% Off</h1>
+                  <div id="countdown_second" class="timer_product"></div>
+                </swiper-slide>
+                <swiper-slide class="hero__mobile_third">
+                  <h1 class="hero_title_third">The Best Product For You</h1>
+                </swiper-slide>
+              </swiper-container>
+            </a>
+
+            <div class="hero_for__desktop">
+              <h1 class="hero_for__desktop_title">Super Flash Sale 50% Off</h1>
+            </div>
+          </div>
+        </section>
+
+        <section class="category">
+          <div class="container category_for__mb">
+            <div class="category_des">
+              <p class="category_des__title">Category</p>
+              <button class="category_des__btn" onclick="addCategory()">
+                More Category
+              </button>
+            </div>
+            <div class="category__container"></div>
+            <div class="category__add"></div>
+            <div class="category_cards"></div>
+          </div>
+
+          <div class="container category_for__desktop">
+            <div class="main_card"></div>
+            <h2 class="category_for__desktop_title">best seller</h2>
+            <div class="category_for__desktop_names"></div>
+            <div class="category_card__items"></div>
+          </div>
+        </section>
+
+        <section class="infos">
+          <div class="container infos_container">
+            <div class="infos_item">
+              <img
+                class="infos_item__img_first"
+                src="./img/icons/shipping-icon.svg"
+                alt="icon"
+              />
+              <p class="infos_item__title">free shipping</p>
+            </div>
+
+            <div class="infos_item">
+              <img
+                class="infos_item__img"
+                src="./img/icons/refund-icon.svg"
+                alt="icon"
+              />
+              <p class="infos_item__title">100% refund</p>
+            </div>
+
+            <div class="infos_item">
+              <img
+                class="infos_item__img"
+                src="./img/icons/support-icon.svg"
+                alt="icon"
+              />
+              <p class="infos_item__title">support 24/7</p>
+            </div>
+          </div>
+        </section>
+
+        <section class="search">
+          <div class="container search__container">
+            <input
+              class="search__input"
+              type="text"
+              placeholder="Search query..."
+            />
+            <button class="search__btn">Search</button>
+          </div>
+        </section>
+
+        <section class="modal">
+          <div class="container maodal__container">
+            <div class="modal_close__btn">
+              <button class="modal_close__btn_item">&times;</button>
+            </div>
+            <div class="modal_card">
+            </div>
+          </div>
+        </section>
+      </main>
+    </div>
+    <footer class="footer">
+      <div class="container footer__container">
+        <div class="footer_logo">
+          <a class="footer_logo__item" href="#">
+            <img src="./img/icons/Logo-icon.svg" alt="logo" />
+            <p>E-Comm</p>
+          </a>
+          <p>
+            Lorem Ipsum is simply dummy text of the printing and typesetting
+            industry. Lorem Ipsum has been the industry's standard dummy text
+            ever.Since the 1500s, when an unknown printer.
+          </p>
+        </div>
+        <div class="footer_follow">
+          <h2 class="footer_follow__title">Follow Us</h2>
+          <p class="footer_follow__text">
+            Since the 1500s, when an unknown printer took a galley of type and
+            scrambled.
+          </p>
+          <span class="follow__icons">
+            <a href="#">
+              <img
+                class="follow__icons_img"
+                src="./img/icons/facebook.svg"
+                alt="icon"
+              />
+            </a>
+            <a href="#">
+              <img
+                class="follow__icons_img"
+                src="./img/icons/twitter-icon.svg"
+                alt="icon"
+              />
+            </a>
+          </span>
+        </div>
+        <div class="footer_contact">
+          <h2 class="footer_contact__title">Contact Us</h2>
+          <p class="footer_contact__text">
+            E-Comm , 4578 Marmora Road, Glasgow D04 89GR
+          </p>
+        </div>
+      </div>
+
+      <div class="container footer_pay">
+        <p class="footer_pay__text">
+          © 2018 Ecommerce theme by www.bisenbaev.com
+        </p>
+        <div class="footer_pay__icons">
+          <img src="./img/icons/western-union-icon.svg" alt="icon" />
+          <img src="./img/icons/mastercard-icon.svg" alt="icon" />
+          <img src="./img/icons/paypal-icon.svg" alt="icon" />
+          <img src="./img/icons/visa-icon.svg" alt="icon" />
+        </div>
+      </div>
+    </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/swiper@9/swiper-element-bundle.min.js"></script>
+    <script src="./js/main.js"></script>
+  </body>
+</html>
